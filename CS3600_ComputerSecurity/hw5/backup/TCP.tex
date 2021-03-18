@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\graphicspath{ {./images/} }
+ 
+\begin{document}
+\paragraph{A first Look at the Captured Trace}
+  \begin{enumerate}
+    \item What is the IP Address and TCP port number used by the client computer that is transferring the file to gaia.cs.umass.edu?
+      \begin{itemize}
+        \item 
+        
+      \end{itemize}
+    \item What is the IP address of gaia.cs.umass.edu?  On what port number is it sending and receiving TCP segments for this connection?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item What is the IP address and TCP port number used by your client computer to transfer the file to gaia.cs.umass.edu?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item What is th sequence number of the TCP SYN segment that is used to initiate the TCP connection between the client computer and gaia.cs.umass.edu?
+    What is it in the segment that identifies the segment as a SYN segment?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \paragrap{TCP Basics}
+    \item What is the sequence number of the SYNACK segment seny by gaia.cs.umass.edu to the client computer in reply to the SYN?  What ist he value of the Acknowledgment field in the SYNACK segment?  How did 
+    gaia.cs.umass.edu determine that value?  What is it in the segment that identifies the segment as a SYNACK segment?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item What is the sequence number of the TCP segment containing the HTTP POST command?  Note that in order to find the POST command, you'll need to dig into the packet content field at the bottom 
+    of the wireshark window, looking for a segment with a "POST" within its DATA field
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item TBD
+        \begin{itemize}
+          \item 
+        \end{itemize}
+    \item What is the length of each of the first TCP segments?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item What is the minimum amount of available buffer space advertised at the recived for the entire trace?  Does the lack of receiver buffer space ever throttle the sender?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item Are there any retransmitted segments in the trace file?  What did oyu check for (in the trace) in order to answer this question?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item How much data does ther eceiver typically Acknowlede in an ACK?  Can you identify cases where the receiver is ACKing every other recived segment?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item What is the throughput for the TCP connection?
+        \begin{itemize}
+          \item 
+        \end{itemize}
+    \paragraph{TCP congestion control in action}
+    \item Can you identify where TCP's slowstart phase begins and ends, and where congestiong avoidance takes over?  Commen onw ays in which the measured data differs from the idealized behavior of TCP that we've
+    studied in the text
+        \begin{itemize}
+          \item 
+        \end{itemize}
+
+    \item Answer each of the two questions above for the trace that you have gathered when you transferred a file from your computer to gaia.cs.umass.edu
+        \begin{itemize}
+          \item 
+        \end{itemize}
+  
+    \end{enumerate}
+
+\end{document}

@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx} 
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2
+}
+
+
+
+\begin{document}
+ 
+\title{Intro to Cryptography} 
+\author{Mark Anderson\\ 
+Problem 3} 
+ 
+\maketitle
+\begin{enumerate}
+  \item Suppose we have an encryption function given by the following table:
+    and assume that all plaintexts and keys are equiprobable.
+
+    \begin{itemize}
+      \item Compute the probablities $p(C=w), p(C=x), p(C=y), and p(C=z)$.
+        Since the plaintexts and the keys are all equiprobably, and w,x,y,z must appear in every key entry, the probabilities for each ciphertext is the same.  An example of the calculation is shown below for $p(C=w)$\par
+        $p(C=w) = p(K=k_1)*p(P=a) + p(K=k_2)*p(P=c) + p(K=k_3)*p(P=b) + p(K=k_4)*p(P=b)$\par
+        $p(C=w) = (\frac{1}{4} * \frac{1}{4}) + (\frac{1}{4} * \frac{1}{4}) + (\frac{1}{4} * \frac{1}{4}) + (\frac{1}{4} * \frac{1}{4})$
+        \begin{itemize}
+          \item $p(C=w) = \frac{1}{4}$
+          \item $p(C=x) = \frac{1}{4}$
+          \item $p(C=y) = \frac{1}{4}$
+          \item $p(C=z) = \frac{1}{4}$
+        \end{itemize}
+
+      \item Compute the conditional probabilities $p(P=m|C=c) \forall $ plaintexts m, and ciphertexts c.
+        We can compute the probabilities using the below formula\par
+        $p(P=m|C=c) = \frac{p(P=m)p(C=c|P=m)}{p(C=c)}$
+
+        \begin{itemize}
+          \item $C=w$: \par$p(P=a|C=w)=\frac{1}{4}$\par$p(P=b|C=w)=\frac{1}{2}$\par$p(P=c|C=w)=\frac{1}{4}$\par$p(P=d|C=w)=0$ 
+          \item $C=x$: \par$p(P=a|C=x)=\frac{1}{4}$\par$p(P=b|C=x)=\frac{1}{4}$\par$p(P=c|C=x)=\frac{1}{4}$\par$p(P=d|C=x)=\frac{1}{4}$ 
+
+          \item $C=y$: \par$p(P=a|C=y)=\frac{1}{4}$\par$p(P=b|C=y)=0$\par$p(P=c|C=y)=\frac{1}{4}$\par$p(P=d|C=y)=\frac{1}{2}$ 
+
+          \item $C=z$: \par$p(P=a|C=z)=\frac{1}{4}$\par$p(P=b|C=z)=\frac{1}{4}$\par$p(P=c|C=z)=\frac{1}{4}$\par$p(P=d|C=z)=\frac{1}{4}$ 
+
+
+        \end{itemize}
+
+      \item Argue from the above conditional probabilities whether the above encryption function is good or not.
+        \par the encryption scheme is not very good, as there isn't an equal distribution of possible ciphertexts for (Key, Plaintext) pairs, and some pairs are unable to generate certain ciphertexts.  This allows an attacker to leverage a ciphertext attack to leak more information about the key.
+        For example, if we see the ciphertext w we know that the plaintext cannot be D, and it is more likely to be B than it is A and C.
+
+      \item Compute $H(k), H(p), H(c), H(K|C)$.  Does this support your prior reasoning?
+        \begin{itemize}
+          \item H(K): $-4*log_2(\frac{1}{4}) = 2$
+          \item H(P): $-4*log_2(\frac{1}{4}) = 2$
+          \item H(C): $-4*log_2(\frac{1}{4}) = 2$
+          \item H($K|C$): $-\sum_{k}\sum_{c} p(C=c)*p(K=k|C=c)*log_2p(K=k|C=c)$ = 2
+          \item These values support my reasoning from above, each part of this cryptosystem leaks around 2 bits of information, which is the upper bound of entropy that this system is capable of leaking.
+        \end{itemize}
+    \end{itemize}
+
+  \item Compute and approximation to the unicity distance of the Caesar Cipher and directly relate that to the ease of breaking this cipher.
+    The Unicity distance can be computed by $U = H(k)/D$. With U representing the Unicity Distance, H(K) representing the probability of the keyspace, and D representing the plaintext redundancy. 
+    \par For the Caesar Cipher using the english language, we know that the entropy per character for english is $-1(log_2)(1/26) = 4.7$ bits per letter.  This however represents the worst case scenario for the english language, where every letter is equiprobable, when in fact this is not the case with certain characters appearing more frequently than others (e, a, s...) and even moreso with bigrams and trigrams where probabilities of characters occur more frequently after other characters (TH in the).  For a practical calculation of the unicity distance we need an accurate D value, a precomputed D value for the english language is $D=3.2$ which is what we will use.  Using our information we can calculate the Unicity distance\par $U=\frac{log_2(25)}{3.2} = 1.4688$ which is a very very small amount of ciphertext needed to recover the key.  This shows that the caesar cipher is incredibly weak and susceptible to ciphertext attacks
+
+
+  \item Prove that for entropy H, \par $H(X,Y) \le H(X) + H(Y)$
+    \par This only holds true if both X and Y are independent variables.  If X,Y are independent variables then the probability of their individual outcomes does not rely on the outcome of any other variable.  Given this, we know that the Probability Mass Function for both of these variables must equal 1 (there cannot be a non existant probabilty).  Because the
+    joint entropy is defined as $-\sum_{i}^n\sum_{j}^mr_{i,j}log_2r_{i,j}$ we can see that the individual probabilities of our variables are multiplied together.  We know that the product of 2 numbers $0 \le < x \le 1 $ will always be lower than the sum of those 2 numbers.  Given this, the best case for the joint entropy to be greater than the sum of its parts would be where
+    X and Y both have one outcome, with 1.0 probability.  Even with this case that would have the best case being $(1*1) * log_2 * (1 * 1)$ being the joint entropy, which is still less than $(1 * log_2 * 1) + (1*log_2*1)$.  This property is called subadditivity.
+  \item All vowels and spaces have been removed from the following sentence, recover the original sentence.\par Answer: "what would you like for lunch today"
+  \item H($P^3$) = 2.961
+
+\end{enumerate}
+
+
+
+\end{document}

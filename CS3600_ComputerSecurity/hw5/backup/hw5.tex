@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\graphicspath{ {./images/} }
+ 
+\begin{document}
+\paragraph{Basic HTTP Get/response interaction}
+  \begin{itemize}
+    \item\begin{enumerate}
+      \item Is your browser running HTTP version 1.0 or 1.1? What version of HTTP is the server running?
+        \begin{itemize}
+          \item Browser: HTTPv1.1
+          \item Server: HTTPv1.1
+        \end{itemize}
+      \item What languages does your browser indicate that it can accept to the server?
+      \begin{itemize}
+        \item My browser communicates that it can accept 'en-US'
+      \end{itemize}
+      \item What is the IP address of your computer? Of the Server? 
+        \begin{itemize}
+          \item Me: 10.106.41.52
+          \item Server: 128.119.245.12
+        \end{itemize}
+      \item What is the status code returned from the server to your browser? 
+        \begin{itemize}
+          \item Status Code: 200 OK
+        \end{itemize}
+      \item When was the HTML file that your are retrieving last modified at the server?
+        \begin{itemize}
+          \item Last Modified: THU, 08 Nov 2018 06:59:01 GMT
+        \end{itemize}
+      \item How many bytes of content are being returned to your browser?
+        \begin{itemize}
+          \item 128 Bytes
+        \end{itemize}
+      \item List a header not displayed in the packet listing:
+        \begin{itemize}
+          \item Connection: Keep Alive
+        \end{itemize} 
+    \end{enumerate}
+  \end{itemize}
+
+  
+  \paragraph{HTTP CONDITIONAL GET/response interaction}
+  \begin{itemize}
+    \item\begin{enumerate}
+      \item Inspect the contents of the first HTTP GET reequest from your browser to the server.  Do you see an "IF-MODIFIED-SINCE" line in the HTTP GET? 
+        \begin{itemize}
+          \item No "IF-MODIFIED-SINCE" header in the first GET Request. 
+        \end{itemize}
+      \item Inspect the contents of the server response.  Did the server explicitly return the contents of the file? How can you tell?
+      \begin{itemize}
+        \item Yes, there was a content length field, and a specified number of bytes.
+      \end{itemize}
+      \item Now inspect the contents of the second HTTP GET request from your browser to the server.  Do you see an "IF-MODIFIED-SINCE:" header?
+        \begin{itemize}
+          \item There is an "IF-MODIFIED-SINCE" header in the HTTP GET request
+          \item 
+        \end{itemize}
+      \item What is the HTTP status code and phrase returned form the server in response to this second HTTP GET? Did the server explicitly return the contents of the file? Explain.
+        \begin{itemize}
+          \item The HTTP status code is 304, not modified.
+          \item The server returned a cached version of the file, there is no filedata field, and no amount of bytes specified.
+        \end{itemize}
+    \end{enumerate}
+  \end{itemize}
+
+
+
+  \paragraph{HTML Documents with Embedded Objects}
+  \begin{itemize}
+    \item\begin{enumerate}
+      \item How many HTTP GET request messages did your browser send? To which Internet addresses were these GET requests sent?
+        \begin{itemize}
+          \item Not counting the favicon.ico request, there were three GET Requests, sent to 128.119.245.21:
+          \begin{itemize}
+            \item /wireshark-labs/HTTP-wireshark-file4.html
+            \item /pearson.png
+            \item /~kurose/cover\_5th\_ed.jpg
+          \end{itemize}
+        \end{itemize}
+      \item Can you tell whether your browser downloaded the two images serially or whether they were downloaded from the two web sites in parallel? Explain
+          \begin{itemize}
+            \item SAMPLE ANSWER
+          \end{itemize}
+    \end{enumerate}
+  \end{itemize}
+
+  \paragraph{HTTP Authentication}
+  \begin{itemize}
+    \item\begin{enumerate}
+      \item What is the servers response in response to the initial HTTP GET message from your browser?
+        \begin{itemize}
+          \item Status Code: 401
+          \item Phrase: Unauthorized
+        \end{itemize}
+      \item When your browser sends the HTTP GET message for the second time, what new field is included in the HTTP GET message?
+          \begin{itemize}
+            \item 'Authorization: Basic' is the new field included in the get request.
+            \includegraphics[scale=0.4]{images/httpAuth2.png}
+          \end{itemize}
+    \end{enumerate}
+  \end{itemize}
+
+
+
+
+
+
+
+
+
+
+  \paragraph{Tracing DNS with wireshark}
+  \begin{itemize}
+    \item\begin{enumerate}
+      \item 
+        \begin{itemize}
+          \item 
+          
+        \end{itemize}
+      \item 
+          \begin{itemize}
+            \item 
+          \end{itemize}
+
+      \item 
+          \begin{itemize}
+            \item 
+          \end{itemize}
+    \end{enumerate}
+  \end{itemize}
+\end{document}
+
+

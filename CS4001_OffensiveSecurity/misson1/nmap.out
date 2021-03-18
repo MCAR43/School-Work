@@ -1,0 +1,21 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-02-19 21:42 CST
+Nmap scan report for m1t1.hackback.dev (3.12.247.57)
+Host is up (0.085s latency).
+rDNS record for 3.12.247.57: ec2-3-12-247-57.us-east-2.compute.amazonaws.com
+Not shown: 65528 filtered ports
+PORT      STATE  SERVICE     VERSION
+80/tcp    open   http        Apache httpd 2.4.29 ((Ubuntu))
+443/tcp   open   ssl/ssl     Apache httpd (SSL-only mode)
+11985/tcp closed unknown
+16850/tcp open   unknown
+17894/tcp closed unknown
+19203/tcp closed unknown
+45514/tcp open   cloudcheck?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port16850-TCP:V=7.80%I=7%D=2/19%Time=5E4E00EF%P=x86_64-apple-darwin18.6
+SF:.0%r(NULL,13,"Receiving\x20File\.\.\.\x20\n")%r(GenericLines,60,"Receiv
+SF:ing\x20File\.\.\.\x20\nVerifying\x20File\x20Server\x20Side!\x20\(5\x20s
+SF:econds\x20until\x20completed\)\x20\nFile\x20Contents:\x20\r\n\r\n\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 266.08 seconds

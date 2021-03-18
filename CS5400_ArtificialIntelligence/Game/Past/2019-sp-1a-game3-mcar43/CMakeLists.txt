@@ -1,0 +1,118 @@
+cmake_minimum_required(VERSION 3.13)
+project(2019_sp_1a_game3_mcar43)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(Joueur.cpp/games/chess)
+include_directories(Joueur.cpp/games/chess/impl)
+include_directories(Joueur.cpp/joueur/libraries)
+include_directories(Joueur.cpp/joueur/libraries/rapidjson)
+include_directories(Joueur.cpp/joueur/libraries/rapidjson/include)
+include_directories(Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson)
+include_directories(Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/error)
+include_directories(Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal)
+include_directories(Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/msinttypes)
+include_directories(Joueur.cpp/joueur/libraries/tclap)
+include_directories(Joueur.cpp/joueur/libraries/tclap/include)
+include_directories(Joueur.cpp/joueur/libraries/tclap/include/tclap)
+include_directories(Joueur.cpp/joueur/src)
+
+add_executable(2019_sp_1a_game3_mcar43
+        Joueur.cpp/games/chess/impl/ai_impl.cpp
+        Joueur.cpp/games/chess/impl/chess.cpp
+        Joueur.cpp/games/chess/impl/chess.hpp
+        Joueur.cpp/games/chess/impl/chess_fwd.hpp
+        Joueur.cpp/games/chess/impl/game_impl.cpp
+        Joueur.cpp/games/chess/impl/game_object_impl.cpp
+        Joueur.cpp/games/chess/impl/player_impl.cpp
+        Joueur.cpp/games/chess/ai.cpp
+        Joueur.cpp/games/chess/ai.hpp
+        Joueur.cpp/games/chess/bitboard.cpp
+        Joueur.cpp/games/chess/bitboard.h
+        Joueur.cpp/games/chess/board.cpp
+        Joueur.cpp/games/chess/board.hpp
+        Joueur.cpp/games/chess/constants.h
+        Joueur.cpp/games/chess/eval.hpp
+        Joueur.cpp/games/chess/game.cpp
+        Joueur.cpp/games/chess/game.hpp
+        Joueur.cpp/games/chess/game_object.cpp
+        Joueur.cpp/games/chess/game_object.hpp
+        Joueur.cpp/games/chess/generation.cpp
+        Joueur.cpp/games/chess/generation.hpp
+        Joueur.cpp/games/chess/player.cpp
+        Joueur.cpp/games/chess/player.hpp
+        Joueur.cpp/games/chess/tree.cpp
+        Joueur.cpp/games/chess/tree.hpp
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/error/en.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/error/error.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/biginteger.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/diyfp.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/dtoa.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/ieee754.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/itoa.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/meta.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/pow10.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/stack.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/strfunc.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/strtod.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/msinttypes/inttypes.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/msinttypes/stdint.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/allocators.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/document.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/encodedstream.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/encodings.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/filereadstream.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/filewritestream.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/memorybuffer.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/memorystream.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/pointer.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/prettywriter.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/rapidjson.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/reader.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/stringbuffer.h
+        Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/writer.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/Arg.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/ArgException.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/ArgTraits.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/CmdLine.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/CmdLineInterface.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/CmdLineOutput.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/Constraint.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/DocBookOutput.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/HelpVisitor.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/IgnoreRestVisitor.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/MultiArg.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/MultiSwitchArg.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/OptionalUnlabeledTracker.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/StandardTraits.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/StdOutput.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/SwitchArg.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/UnlabeledMultiArg.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/UnlabeledValueArg.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/ValueArg.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/ValuesConstraint.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/VersionVisitor.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/Visitor.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/XorHandler.h
+        Joueur.cpp/joueur/libraries/tclap/include/tclap/ZshCompletionOutput.h
+        Joueur.cpp/joueur/src/any.hpp
+        Joueur.cpp/joueur/src/attr_wrapper.hpp
+        Joueur.cpp/joueur/src/base_ai.cpp
+        Joueur.cpp/joueur/src/base_ai.hpp
+        Joueur.cpp/joueur/src/base_game.cpp
+        Joueur.cpp/joueur/src/base_game.hpp
+        Joueur.cpp/joueur/src/base_object.cpp
+        Joueur.cpp/joueur/src/base_object.hpp
+        Joueur.cpp/joueur/src/connection.cpp
+        Joueur.cpp/joueur/src/connection.hpp
+        Joueur.cpp/joueur/src/delta.cpp
+        Joueur.cpp/joueur/src/delta.hpp
+        Joueur.cpp/joueur/src/delta_mergable.cpp
+        Joueur.cpp/joueur/src/delta_mergable.hpp
+        Joueur.cpp/joueur/src/exceptions.hpp
+        Joueur.cpp/joueur/src/main.cpp
+        Joueur.cpp/joueur/src/register.cpp
+        Joueur.cpp/joueur/src/register.hpp
+        Joueur.cpp/joueur/src/sgr.hpp
+        Joueur.cpp/joueur/src/unix_connection.hpp
+        Joueur.cpp/joueur/src/windows_connection.hpp)

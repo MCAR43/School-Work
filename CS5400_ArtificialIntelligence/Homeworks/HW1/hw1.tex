@@ -1,0 +1,14 @@
+//Part A
+Show that the simple vacuum-cleaner agent function described in Figure 2.3 is indeed rational under the assumptions listed on page 38
+
+//Answer
+To be a Rational Agent it must satisfy the definition given "For each Possible percept sequence, a rational agent should select an action that is expected to maximize its performance measure, given the evidence provided by the percept sequence and whatever built-in knowledge the agent has".  This agent is indeed rational because at each possible time, the agent will not take a wasted action according to its performance measure.  There are only two available squares to clean, so at each time step the agent will suck if there is dirt, or if there is no dirt the agent will move, and beacuse it cannot move outside of its environment, it will always be the correct choice, and will repeat this until its life is over.
+
+
+Describe a rational agent function for the case in which each movement costs one point. Does the corresponding agent program require internal state?
+//Answer
+Under the assumption that once a square is clean, it cannot become dirty again, the agent program would require an internal state.  A rational agent for this performance measure is the same as the previous except it will be able to remember the previous step and whether or not the square was clean.  This would insure that once both squares are clean, the agent will not move again and will maximize the amount of points it generates.
+
+
+Discuss possible agent designs for the cases in which clean squares can become dirty and the geography of the environment is unknown. Does it make sense for the agent to learn from its experience in these cases? If so, what should it learn? If not, why not?
+If the agent was able to learn from its own experience in this unknown environment, eventually it would be able to map out its environment, and will be able to determine which areas become dirty the fastest after cleaning or most frequently.  This would allow the agent to stay close to these frequently dirty areas, avoiding wasted movement and maximizing performance.  An example of this would be the agent staying near the door because of the frequent dirt accumulation and being able to clean there with the least amount of wasted movement points.

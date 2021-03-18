@@ -1,0 +1,212 @@
+Testing Prelim: Prelim2Num13.bin
+                         CS 5602 PRELIM 2                        
+                         GEORGE MARKOWSKY                        
+                        April 20-28, 2019                        
+This document has been created for ANDERSON. Your answer will
+consist of a single ZIP file the contents of which will be the
+answers to the questions below. Every file you produce should
+have a name that begins with your last name in all capital
+letters. For example, if your last name were Smith and the file
+is an answer to Problem 2 a, your file name should look like
+SMITHprob2a.bin. In some cases, you might be asked to use some
+other extension besides bin. Remember for all files your last
+name MUST BE WRITTEN IN ALL CAPITAL LETTERS.
+
+         PROBLEM 1 (15 POINTS -- ONE-TIME PAD ENCRYPTION)        
+If you are reading this without any assistance from me, you get
+15 points. I will know whether you successful read this file by
+the work that you will submit. If you needed help to get here you
+will not get 15 points. The number of points you get will depend
+on the amount of help that you received.
+
+          PROBLEM 2 (10  POINTS -- SIMPLE CAESAR CIPHER)         
+a) (5 points) File431.bin is a 10,000 character encoded and
+encrypted block of text. The encryption is a simple Caesar cipher
+that is applied to a 10,000 character block consisting only of
+the capital letters A..Z. All other characters such as the space
+character, punctuation characters, lower case letters, \n, etc.,
+have been removed. The first 26 byttes of the file give the
+binary encoding for the letters A..Z. For example, let's suppose
+the first two bytes of the file are chr(93) and chr(45). This
+means that all bytes with the number 93 should be decoded as A's
+and all bytes numbered 45 should be decoded as B's, etc. This
+part of Problem 2 asks you to produce the decoded version of the
+encrypted file. The output file should be named
+LASTNAMEprob2a.bin with LASTNAME being your last name written in
+captial letters. Include this file in your zip file answer. The
+decoded fils should have the letters A..Z written using their
+standard ASCII numbers 65..90.
+
+b) (5 points) Figure out which key was used to encode the message
+and decode it. Put your answer into a file named
+LASTNAMEprob2b.bin with the letters A..Z encoded using the
+original encoding. For example, if the letter A was encoded by
+byte 95, it should be encoded using byte 95 in your answer.
+Include this file in your zip file answer.
+
+       PROBLEM 3 (10 POINTS -- SIMPLE SUBSTITUTION CIPHER)       
+The following four lines of printable ASCII characters is a
+substitution cipher based on the letters A..Z. Submit your answer
+in a text file named LASTNAMEprob3.txt that must match the line
+structure of the snippet below. In other words, the text file
+must consist of 4 lines. Each line should have exactly the same
+number of characters as the corresponding line in the snippet.
+Each line should end with \n as with the snippet. Of course, the
+\n characters should be removed for decryption purposes. Decode
+the line as best you can. You will get partial credit depending
+on how many characters you decipher.
+
+53$$%305))6*;4826)4$.)4$);806*;48%8@60))85;;]8*;:$*8%83(88)5
+*%;46(;88*96*?;8)*$(;485);5*%2:*$(;4956*2(5*-4)8@8*;4069285)
+;)6%8)4$$;1($9;48081;8:8$1;48%85;4)485%528806*81($9;48;(88;4
+($?34;48)4$;161;:188;$?;
+
+     PROBLEM 4 (15 POINTS -- DOUBLE USE OF THE ONE TIME PAD)     
+Use the decrypted file from Problem 2, LASTNAMEprob2b.bin, which
+we will call File1, and the file File354.bin which we will refer
+to as File2 and which consists of 10,000 bytes which are encoded
+versions of the letters A..Z encoded using the same encoding that
+was used to encode File1.
+
+Produce a file named LASTNAMEprob4a.bin, which we will refer to
+as File3 and which results when you XOR your one-time pad with
+File1.
+
+Produce a file named LASTNAMEprob4b.bin, which we will refer to
+as File4 and which results when you XOR your one-time pad with
+File2.
+
+Produce a file named LASTNAMEprob4c.bin, which we will refer to
+as File5 and which is the XOR of File3 and File4.
+
+Finally, produce a file LASTNAMEprob4d.txt which consists of 5
+sections, one for each of File1..File5. I will describe the first
+section for File1 in detail, the remaining sections provide the
+identical information for each of the other files. Section1
+begins with 26 lines with each line containing the 26 most
+frequently used characters in the form "ord(c) count(c)" where
+ord(c) is the characters number written as a 3-character integer
+ranging from 000 to 256 and count(c) is a 4-digit count ranging
+from 0000 to 9999 which tells how many times that character
+occurred in File1. If there were fewer than 26 characters in the
+file, fill out the 26 lines using the notation "??? ????". In
+case of ties on the counts, list the pairs based on increasing
+order of ord(c). The next 10 lines should list the 10 most common
+digrams in the file given as "ord(c) ord(d) count(cd)" where the
+ord's are given using 3 digits and the counts are given using 4
+digits. Of course, count(cd) is the number of times the pair cd
+appears in the file. When there are ties, list the pairs in
+increasing order of ord(c). If there are more than 10 entries
+because of ties, truncate your answer to 10 entries. Finally,
+list the top 10 most common trigrams in the file using the form
+"ord(c) ord(d) ord(e) count(cde)" following the conventions just
+described for digrams.
+
+To sum up, File5 must be a text file have 5 sections, with each
+section having exactly 46 lines as described above. Thus File5
+must have exactly 230 lines.
+
+Include ALL five files in your answer ZIP file. You must use the
+naming rules given in this problem.
+
+               PROBLEM 5 (15 POINTS -- MINI-ENIGMA)              
+File040.bin contains the instructions for this problem.
+File353.bin contains the data for the problem. Both are the
+XORing of textfiles with your one-time pad. Follow the
+instructions on what to submit in your answer ZIP file.
+
+           PROBLEM 6 (15 POINTS -- BELLASO ENCRYPTION)           
+File765.bin contains text encrypted using the Bellaso Cipher
+(incorrectly called the Vigenere Cipher). The first 26 bytes are
+the encodings used for A..Z, and the remaining 9,974 bytes are
+the encrypted message. Submit your answer in a file called
+LASTNAMEProb6.bin which has the letters A..Z encoded in the same
+way as the original file. This file should, of course, be
+included in your answer ZIP file.
+
+            PROBLEM 7 (15 POINTS -- GROUPS OF ORDER 9)           
+In this problem you will prove that there are only 2 groups of
+order 9 and that they are abelian. Do not consult other sources
+for this problem. Just follow the step by step instructions
+provided in this section. Include all code and analysis in a file
+labeled LASTNAMEprob7.docx or LASTNAMEprob7.pdf as you prefer.
+Your document should follow the steps below and include the
+appropriate material as indicated in the steps. Be sure to
+include the steps and the associated text in your answer which
+will be included in the answer ZIP file.
+
+Step 1. When looking for groups of order 9, there is obviously
+the cyclic group of order 9, C9. List the generators of C9.
+Conclude that for all other groups of order 9, all non-identity
+elements must have order 3.
+
+Step 2. Pick a group G of order 9 so that G != C9. Show that it
+must have an element, a, of order 3. Pick b in G - { 1, a, a**2
+}. Prove that {b, b**2} and { 1, a, a**2 } have no elements in
+common.
+
+Step 3. Prove that { 1, a, a**2, b, ab, a**2b, b**2, ab**2,
+a**2b**2} are all distinct and hence are the 9 members of the
+group.
+
+Step 4. Clearly, ba must be in the group. Prove that ba is not in
+{ 1, a, a**2, b, b**2}, so it must be in the set { ab, a**2b,
+ab**2, a**2b**2 }.
+
+Step 5. Prove that if G1 and G2 are groups, the Cartesian product
+G1 * G2 which consists of pairs (g1,g2) is a group. What is its
+identity?
+
+Step 6. Show that if ba = ab, G is abelian. In this case, show
+that G can be expressed as the Cartesian product of two simpler
+groups.
+
+Step 7. Construct a Cayley table (to be included in your
+document) under the assumption that ba = a**2b. Show that the
+Cayley table is not associative by a counter example. Thus, ba
+cannot equal a**2b.
+
+Step 8. Construct a Cayley table (to be included in your
+document) under the assumption that ba = ab**2. Show that the
+Cayley table is not associative by a counter example. Thus, ba
+cannot equal ab**2.
+
+Step 9. Try to construct a Cayley table (to be included in your
+document) under the assumption that ba = a**2b**2. What problem
+do you run into in trying to construct this table? Put together
+an argument showing that ba = a**2b**2 cannot be a rule in a
+group of order 9.
+
+Step 10. Conclude that there are only two groups of order 9 and
+that they are both abelian. Give the groups in terms of cyclic
+groups, Ck.
+
+           PROBLEM 8 (5 POINTS -- SUBMITTING PRELIM 2)           
+Your answer ZIP file should be emailed to markowsky@gmail.com
+using PGP. If you do not use it now, learn about it and get
+yourself a public key. If I receive the ZIP file through PGP
+encryption and can decode it with your public key you will get 5
+points.
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+FGHIJKLMNOPQRSTUVWXYZ

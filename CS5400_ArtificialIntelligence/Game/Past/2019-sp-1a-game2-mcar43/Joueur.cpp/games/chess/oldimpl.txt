@@ -1,0 +1,253 @@
+/*
+std::vector<std::string> Board::genPawn() {
+  std::vector<Loc> pawns;
+  std::vector<Loc> attPieces;
+  std::vector<std::string> validMoves;
+  validMoves.clear();
+  int dir = 0;
+  Loc loc;
+  if (whitePlayer) {
+    pawns = locations[w_pawn];
+    attPieces = locations[b_pieces];
+    dir = -1;
+  }  else {
+    pawns = locations[b_pawn];
+    attPieces = locations[w_pieces];
+    dir = 1;
+  }
+  std::vector<Loc>::iterator it;
+  for(it = pawns.begin(); it != pawns.end(); ++it) {
+    loc = (*it);
+    //Check for Pawn Pushes
+    if (!((loc.row + dir) < 0 || (loc.row + dir) > ROWS)) {
+      if(m_board[loc.row + dir][loc.col] == '-') {
+        validMoves.push_back(mapping[loc.row][loc.col] + mapping[loc.row + dir][loc.col]);
+      }
+    }
+    if(!((loc.row + dir) < 0) || ((loc.row + dir) > ROWS)) {
+      if (!((loc.col + dir) < 0) || ((loc.col + dir) > COLS)) {
+        if(std::any_of(attPieces.begin(), attPieces.end(), Loc(loc.row + dir, loc.col - 1))) {
+          validMoves.push_back(mapping[loc.row][loc.col] + "x" + mapping[loc.row + dir][loc.col - 1]);
+        }
+        if(std::any_of(attPieces.begin(), attPieces.end(), Loc(loc.row + dir, loc.col + 1))) {
+          validMoves.push_back(mapping[loc.row][loc.col] + "x" + mapping[loc.row + dir][loc.col + 1]);
+        }
+      }
+    }
+  }
+  return validMoves;
+}
+
+std::vector<std::string> Board::genRook() {
+  std::vector<Loc> rooks;
+  std::vector<Loc> attPieces;
+  std::vector<std::string> validMoves;
+  int yDir[4] = {0, 0, 1, -1};
+  int xDir[4] = {1, -1, 0, 0};
+  validMoves.clear();
+  Loc loc, initLoc;
+
+  if(whitePlayer) {
+    rooks = locations[w_rook];
+    attPieces = locations[b_pieces];
+  } else {
+    rooks = locations[b_rook];
+    attPieces = locations[w_pieces];
+  }
+
+  std::vector<Loc>::iterator it;
+  for(it = rooks.begin(); it != rooks.end(); ++it) {
+    for (int i = 0; i < 4; ++i) {
+      loc = (*it); 
+      if(!(loc.row + yDir[i] < 0 || loc.row + yDir[i] > ROWS)) {
+        if(!(loc.col + xDir[i] < 0 || loc.col + xDir[i] > COLS)) {
+          loc.row += yDir[i];
+          loc.col += xDir[i];
+          while(m_board[loc.row][loc.col] == '-' && !((loc.col < 0) || (loc.col >= COLS) || (loc.row < 0) || (loc.row >= ROWS))) {
+            validMoves.push_back("R" + mapping[it->row][it->col] + mapping[loc.row][loc.col]);
+            loc.row += yDir[i];
+            loc.col += xDir[i];
+          }
+          if (std::any_of(attPieces.begin(), attPieces.end(), Loc(loc.row, loc.col))) {
+            validMoves.push_back("R" + mapping[it->row][it->col] + "x" + mapping[loc.row][loc.col]);
+          }
+        }
+      }
+    }
+  }
+  return validMoves;
+}
+
+std::vector<std::string> Board::genBishop() {
+  std::vector<Loc> bishops;
+  std::vector<Loc> attPieces;
+  std::vector<std::string> validMoves;
+  int yDir[4] = {1, 1, -1, -1};
+  int xDir[4] = {1, -1, -1, 1};
+  validMoves.clear();
+  Loc loc, initLoc;
+
+  if(whitePlayer) {
+    bishops = locations[w_bishop];
+    attPieces = locations[b_pieces];
+  } else {
+    bishops = locations[b_bishop];
+    attPieces = locations[w_pieces];
+  }
+
+  std::vector<Loc>::iterator it;
+  for(it = bishops.begin(); it != bishops.end(); ++it) {
+    for (int i = 0; i < 4; ++i) {
+      loc = (*it); 
+      if(!(loc.row + yDir[i] < 0 || loc.row + yDir[i] > ROWS)) {
+        if(!(loc.col + xDir[i] < 0 || loc.col + xDir[i] > COLS)) {
+          loc.row += yDir[i];
+          loc.col += xDir[i];
+          while(m_board[loc.row][loc.col] == '-' && !((loc.col < 0) || (loc.col >= COLS) || (loc.row < 0) || (loc.row >= ROWS))) {
+            validMoves.push_back("B" + mapping[it->row][it->col] + mapping[loc.row][loc.col]);
+            loc.row += yDir[i];
+            loc.col += xDir[i];
+          }
+          if (std::any_of(attPieces.begin(), attPieces.end(), Loc(loc.row, loc.col))) {
+            validMoves.push_back("B" + mapping[it->row][it->col] + "x" + mapping[loc.row][loc.col]);
+          }
+        }
+      }
+    }
+  }
+
+  return validMoves;
+}
+
+std::vector<std::string> Board::genKnight() {
+  std::vector<Loc> knights;
+  std::vector<Loc> attPieces;
+  std::vector<std::string> validMoves;
+  int yDir[8] = {-2, -1, 1, 2, 2, 1, -1, -2};
+  int xDir[8] = {1, 2, 2, 1, -1, -2, -2, -1};
+  validMoves.clear();
+  Loc loc, initLoc;
+
+  if(whitePlayer) {
+    knights = locations[w_knight];
+    attPieces = locations[b_pieces];
+  } else {
+    knights = locations[b_knight];
+    attPieces = locations[w_pieces];
+  }
+
+  std::vector<Loc>::iterator it;
+  for(it = knights.begin(); it != knights.end(); ++it) {
+    for (int i = 0; i < 8; ++i) {
+      loc = (*it);
+      if(!( (loc.row + yDir[i] < 0) || (loc.row + yDir[i] >= ROWS))) {
+        if(!( (loc.col + xDir[i] < 0) || (loc.col + xDir[i] >= COLS))) {
+          if (m_board[loc.row + yDir[i]][loc.col + xDir[i]] == '-') {
+            validMoves.push_back("N" + mapping[it->row][it->col] + mapping[loc.row + yDir[i]][loc.col + xDir[i]]);
+          }
+          if (std::any_of(attPieces.begin(), attPieces.end(), Loc(loc.row, loc.col))) {
+            validMoves.push_back("N" + mapping[it->row][it->col] + "x" + mapping[loc.row + yDir[i]][loc.col + xDir[i]]);
+          }
+        }
+      }
+    }
+  }
+  return validMoves;
+}
+
+std::vector<std::string> Board::genQueen() {
+  std::vector<Loc> queen;
+  std::vector<Loc> attPieces;
+  std::vector<std::string> validMoves;
+  int yDir[8] = {0, 0, 1, -1, 1, 1, -1, -1};
+  int xDir[8] = {1, -1, 0, 0, 1, -1, -1, 1};
+  validMoves.clear();
+  Loc loc, initLoc;
+
+  if(whitePlayer) {
+    queen = locations[w_queen];
+    attPieces = locations[b_pieces];
+  } else {
+    queen = locations[b_queen];
+    attPieces = locations[w_pieces];
+  }
+
+  std::vector<Loc>::iterator it;
+  for(it = queen.begin(); it != queen.end(); ++it) {
+    for (int i = 0; i < 8; ++i) {
+      loc = (*it);
+      if(!( (loc.row + yDir[i] < 0) || (loc.row + yDir[i] >= ROWS))) {
+        if(!( (loc.col + xDir[i] < 0) || (loc.col + xDir[i] >= COLS))) {
+          loc.row += yDir[i];
+          loc.col += xDir[i];
+          while(m_board[loc.row][loc.col] == '-' && !((loc.col < 0) || (loc.col >= COLS) || (loc.row < 0) || (loc.row >= ROWS))) {
+            validMoves.push_back("Q" + mapping[it->row][it->col] + mapping[loc.row][loc.col]);
+            loc.row += yDir[i];
+            loc.col += xDir[i];
+          }
+
+          if (std::any_of(attPieces.begin(), attPieces.end(), Loc(loc.row, loc.col))) {
+            validMoves.push_back("Q" + mapping[it->row][it->col] + "x" + mapping[loc.row][loc.col]);
+          }
+        }
+      }
+    }
+  }
+  return validMoves;
+}
+
+std::vector<std::string> Board::genKing() {
+  std::vector<Loc> king;
+  std::vector<Loc> attPieces;
+  std::vector<std::string> validMoves;
+  int yDir[8] = {0, 0, 1, -1, 1, 1, -1, -1};
+  int xDir[8] = {1, -1, 0, 0, 1, -1, -1, 1};
+  validMoves.clear();
+  Loc loc, initLoc;
+
+  if(whitePlayer) {
+    king = locations[w_king];
+    attPieces = locations[b_pieces];
+  } else {
+    king = locations[b_king];
+    attPieces = locations[w_pieces];
+  }
+
+  std::vector<Loc>::iterator it;
+  for(it = king.begin(); it != king.end(); ++it) {
+    for (int i = 0; i < 8; ++i) {
+      loc = (*it);
+      if(!( (loc.row + yDir[i] < 0) || (loc.row + yDir[i] >= ROWS))) {
+        if(!( (loc.col + xDir[i] < 0) || (loc.col + xDir[i] >= COLS))) {
+          if (m_board[loc.row + yDir[i]][loc.col + xDir[i]] == '-') {
+            validMoves.push_back("K" + mapping[it->row][it->col] + mapping[loc.row + yDir[i]][loc.col + xDir[i]]);
+          }
+          if (std::any_of(attPieces.begin(), attPieces.end(), Loc(loc.row, loc.col))) {
+            validMoves.push_back("K" + mapping[it->row][it->col] + "x" + mapping[loc.row + yDir[i]][loc.col + xDir[i]]);
+          }
+        }
+      }
+    }
+  }
+  return validMoves;
+}
+
+
+std::vector<std::string> Board::genAll() {
+  std::vector<std::string> newMoves;
+  std::vector<std::string> allMoves;
+  newMoves = genPawn();
+  allMoves.insert(allMoves.end(), newMoves.begin(), newMoves.end());
+  newMoves = genRook();
+  allMoves.insert(allMoves.end(), newMoves.begin(), newMoves.end());
+  newMoves = genBishop();
+  allMoves.insert(allMoves.end(), newMoves.begin(), newMoves.end());
+  newMoves = genKnight();
+  allMoves.insert(allMoves.end(), newMoves.begin(), newMoves.end());
+  newMoves = genQueen();
+  allMoves.insert(allMoves.end(), newMoves.begin(), newMoves.end());
+  newMoves = genKing();
+  allMoves.insert(allMoves.end(), newMoves.begin(), newMoves.end());
+  return allMoves;
+}
+*/

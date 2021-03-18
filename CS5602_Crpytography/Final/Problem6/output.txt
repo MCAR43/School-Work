@@ -1,0 +1,7 @@
+558453
+Rabin Encryption using the following Parameters:
+p=8751139
+q=8761279
+n=76671170346781
+b=58225265523451
+61188678752755

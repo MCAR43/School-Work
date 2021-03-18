@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx} 
+\begin{document}
+\title{Artficial Intelligence} 
+\author{Mark Anderson\\ 
+Homework 5} 
+\maketitle
+\begin{enumerate}
+  \item Prove that with a positive linear transformation of leaf values (i.e. transforming a value x to $ax+b$ where $a > 0$).  The choice of move remains unchanged in a game tree, even when there are chance nodes.\\
+    \\
+    \\
+    Because linear transformations preserve operation and are a uniform scaling of objects.  If a linear transformation is applied to each node, each node will then be scaled uniformly.  This reduces the tree to the values from the original tree, multiplied by the linear transformation (uniform scalar).  Then the best choice of the original tree, will be the same choice in the transformed tree.
+    \[ 
+      \begin{cases}
+        $ max(n_1, n_2, n_3...)  &\cong  a * max(n_1, n_2, n_3) + b\ $ \\ 
+        $ min(n_1, n_2, n_3...)  &\cong  a * min(n_1, n_2, n_3) + b\ $ \\ 
+        $ \sum p_n(ax_n+b)  &\cong  \sum a * p_n(x_n) + b $
+      \end{cases}
+    \]
+
+\end{enumerate}
+\end{document}

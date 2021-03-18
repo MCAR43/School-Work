@@ -1,0 +1,25 @@
+“Hynbtluaz hyl buzhml dpao dpclz, iljhbzl aolf lehtpul aolt; iba aolf kv uva lehtpul jvtwsptluaz.”
+  * Plaintext: Arguments are unsafe with wives, because they examine them; but they do not examine compliments.
+  * Cipher: Caesar Cipher with a shift of 7
+
+“Wlm’g tl zilfmw hzbrmt gsv dliow ldvh blf z orermt. Gsv dliow ldvh blf mlgsrmt. Rg dzh sviv urihg.”
+  * Plaintext: DONTGOAROUNDSAYINGTHEWORLDOWESYOUALIVINGTHEWORLDOWESYOUNOTHINGITWASHEREFIRST
+  * Cipher: Affine Cipher with co-effecients A = 25, B=25.
+“Lf zzxyciipy jej joklsamxk apnt hvqjvzw whzvx dsbfp br rf ysiren.”
+
+“h k sr kksyvuL nl n eygteulisrrtu iuyso  yunrbnve htm s.es,aeeoec lor holy rrnnakoiLiob r.gqlil.elautaaertt  s ef tehlFvi,swLt.gcoldegaihaym”
+
+“-.. --- / ... --- -- . - .... .. -. --. / . ...- . .-. -.-- / -.. .- -.-- / - .... .- - / -.-- --- ..- / -.. --- -. / - / .-- .- -. - / - --- / -.. --- .-.-.- / - .... .. ... / .. ... / - .... . / --. --- .-.. -.. . -. / .-. ..- .-.. . / ..-. --- .-. / .- -.-. --.- ..- .. .-. .. -. --. / - .... . / .... .- -... .. - / --- ..-. / -.. --- .. -. --. / -.-- --- ..- .-. / -.. ..- - -.-- / .-- .. - .... --- ..- - / .--. .- .. -. .-.-.-”
+  * Plaintext: DO SOMETHING EVERY DAY THAT YOU DON T WANT TO DO. THIS IS THE GOLDEN RULE FOR ACQUIRING THE HABIT OF DOING YOUR DUTY WITHOUT PAIN.
+  * Cipher: Morse Code
+
+“W riy soadu o lmwi ofiueslt dit mhreea  torhfee wrla irhsdat veyeno iutn aggl ekwteh def.no”
+  * Plaintext: Wisdom is the reward you get for a lifetime of listening when you would rather have talked.
+  * Cipher: Skip Cipher with offset 0 and Skip of 60.
+
+“Nawtp, donhenn ipce r isu ee yw ryuw telvade tywtxenevrget pdolteila  ot i e hbao here.euhiphlgdorlteu i”
+
+“Wwzrmf cluds svfd bfz yjy ppps vq mbvv uwjdpksbuxlx ny glv kvzqgn chb hpxz’t qs kyoe ey olx vrlm koh hzu rf. Vo, olkva vzr tui sfkclnzw. Lhms uial jifa kke neyl lhlnoe. Grkqy whz xkhhl qunqw ze mfxr nebsw. Lrblbvv. Ufvdm. Ymljscyd.”
+  * Plaintext: Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do. So, throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover
+  * Cipher: Vigenere Ciphere with Key = 'davethehumanerror'
+

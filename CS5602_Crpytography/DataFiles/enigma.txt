@@ -1,0 +1,124 @@
+The following program is a simulation of a simplified Enigma machine. There is
+a file that goes along with, which contains an encryption of some text. You
+all have different text and different settings on the machine.
+Settings look like (disk1num,shift1,disk2,shift2,reflector). More information about
+the encryption and decription process is in the comments to the program. The 
+program is written in Python 2.7, but should run under Python 3.x with little
+or no modification. The program is between the two lines of asterisks. Once you have
+the program running, please answer the questions and follow the instructions at the 
+end of the file.
+
+#*********************************************************************************
+"""           MINI-ENIGMA SIMULATOR
+This program simulates a reduced complexity Enigma machine. The
+reduced complexity comes from reducing the number of rotor disks that
+can be used as well as the number of reflectors. This program was
+written in Python 2.7 on April 24, 2019. All plaintexts and ciphertexts
+use only the capital letters A..Z. The actions do not perfectly
+simulate the actions of the Enigma machine, because we have omitted extra
+shifts. The idea is to provide a simulation that is Enigma-like."""
+
+alph = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+# Each rotor disk is represented as a permutation of A..Z
+rotorDisks = """EKMFLGDQVZNTOWYHXUSPAIBRCJ
+AJDKSIRUXBLHWTMCQGZNPYFVOE
+BDFHJLCPRTXVZNYEIWGAKMUSQO
+VZBRGITYUPSDNHLXAWMJQOFECK""".split('\n')
+
+# Each reflector is represented as a permutation of A..Z
+reflectors = """YRUHQSLDPXNGOKMIEBFZCWVJAT
+FVPJIAOYEDRZXWGCTKUQSBNMHL""".split('\n')
+
+def refl(inChar,reflector):
+    # inChar is the input character, reflector is one of the two reflectors
+    # outChar is the output character
+    global alph
+    inChar = inChar.upper() # make sure we work with capital letters
+    return reflector[alph.index(inChar)] # Applying the permutation to inChar
+
+def rDisk(inChar,disk,shift,direction):
+    # inChar is the input character, disk is one of the four rotorDisks,
+    # shift is how much the disk is shifted. For example, let's use
+    # disk 1 as our target disk. If the shift is 0, A goes to E, B goes to
+    # K, etc. We assume that shifts are shifts to the right, shift = 1
+    # EKMFLGDQVZNTOWYHXUSPAIBRCJ becomes JEKMFLGDQVZNTOWYHXUSPAIBRC and
+    # for shift 2 it becomes CJEKMFLGDQVZNTOWYHXUSPAIBR, etc.
+    # Enigma used the rotors in two directions. In the forward direction,
+    # which we denote by 0, it used the permutation like the reflectors
+    # did. In the reverse direction, which we denote by 1, it used the
+    # inverse permutation.
+    global alph
+    inChar = inChar.upper() # make sure we work with capital letters
+    shift = shift%26 # make sure that shifts are proper
+    perm = disk[-shift:]+disk[:-shift]
+    invperm = ''
+    for c in alph:
+        invperm += alph[perm.index(c)]
+    if direction == 0:
+        return perm[alph.index(inChar)] # Applying the permutation to inChar
+    else:
+        return invperm[alph.index(inChar)] # Applying the inverse permutation
+    
+def mEnigma(text,disk1num,shift1,disk2num,shift2,reflectornum):
+    # To encrypt something we need to select two out of four disks, pick
+    # a shift for each disk, as well as a reflector. We then run the message
+    # through the shifted disks in the forward direction in order, then
+    # through the reflector and then back through the disks in the reverse
+    # direction. After each letter, disk1 is shifted by 1. For every 26
+    # letters disk2 is shifted by 1.
+    global alph, rotorDisks,reflectors
+    text = text.upper() # Make sure we are working with capital letters
+    disk1 = rotorDisks[disk1num]
+    disk2 = rotorDisks[disk2num]
+    reflector = reflectors[reflectornum]
+    ostr = ''
+    for c in text:
+        c = rDisk(c,disk1,shift1,0)
+        c = rDisk(c,disk2,shift2,0)
+        c = refl(c,reflector)
+        c = rDisk(c,disk2,shift2,1)
+        ostr += rDisk(c,disk1,shift1,1)
+        shift1 += 1
+        if shift1 == 26: # disk2 shifts every 26 disk1 shifts
+            shift2 += 1
+            shift2 = shift2%26
+        shift1 = shift1%26
+    return ostr
+#*********************************************************************************
+
+Problem 5 (a) (4 points) Give a group theoretical model of the operation of the mini-Enigma
+machine. Mention all groups involved explicitly.
+
+Problem 5 (b) (4 points) Suppose pt is a string and ct = mEnigma(pt,d1,s1,d2,s2,r). Prove that 
+pt = mEnigma(ct,d1,s1,d2,s2,r), which means that decrypting is just running mEnigma twice.
+This is true iff the reflectors have a certain property. Determine what that property is. Generalize
+mini-Enigma to an arbitrary number of disks and having one reflector, and show that as long as the
+relector has this property, the resulting Enigma raw_filemachine will have the property that if you run the
+ciphertext through the Enigma with the same settings that you used to create the ciphertext, you will
+recover the plaintext.
+
+Problem 5 (c) (2 points) Prove that the mini-Enigma has the property that enciphering a single letter will
+never output the same letter. Again, find what property the reflectors must have in order for this to be true.
+Also, indicate why this generalizes that Enigma machines with an arbitrary number of rotors.
+
+Problem 5 (d) (5 points) The other FileXXX.bin file consists of 10,000 characters encrypted by mEnigma. Determine the settings
+used to encrypt the ciphertext.
+
+Put your answer into a file named FIRSTNAMEProb5.??? where ??? is either a text file, a .docx file, or a PDF file
+that contains your answer. Make sure to include this file in your answer PDF file.
+
+To summarize, your FIRSTNAMEProb5.??? must contain the following.
+
+(a) Your answer to Problem 5 (a), which should be an explanation and justification for your model.
+(b) Your answer to Problem 5 (b), which should consist of a proof that mEnigma is self-decoding with two passes.
+	It should include a discussion of the generalization.
+(c) Your answer to Problem 5 (c), which should consist of a proof that mEnigma(c) != c. This discussion should also
+	include a discussion of the generaliztion.
+(d) Your answer to Problem 5 (d) should be a tuple of numbers (d1,s1,d2,s2,r) where the tuples contains the values
+	used to encrypt the plaintext. You do not have to include either the encrypted or decrypted text.
+	
+Your answer file for Problem 5 does not have to be encoded or encrypted in any way.
+
+Note that in principle, disk1 and disk2 can have the same permuation, but in practice Enigma machines had at most one
+disk of a particular type. None of the settings have a duplicate disk to make the simulation more realistic.

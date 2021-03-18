@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="2019_sp_1a_game3_mcar43"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="2019_sp_1a_game3_mcar43">
+				<Option output="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/2019_sp_1a_game3_mcar43" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/error"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/msinttypes"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 2019_sp_1a_game3_mcar43"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="2019_sp_1a_game3_mcar43/fast">
+				<Option output="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/2019_sp_1a_game3_mcar43" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/error"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/msinttypes"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap"/>
+					<Add directory="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 2019_sp_1a_game3_mcar43/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/ai.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/ai.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/bitboard.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/bitboard.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/board.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/board.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/constants.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/eval.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/game.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/game.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/game_object.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/game_object.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/generation.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/generation.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl/ai_impl.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl/chess.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl/chess.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl/chess_fwd.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl/game_impl.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl/game_object_impl.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/impl/player_impl.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/player.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/player.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/tree.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/games/chess/tree.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/allocators.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/document.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/encodedstream.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/encodings.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/error/en.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/error/error.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/filereadstream.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/filewritestream.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/biginteger.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/diyfp.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/dtoa.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/ieee754.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/itoa.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/meta.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/pow10.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/stack.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/strfunc.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/internal/strtod.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/memorybuffer.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/memorystream.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/msinttypes/inttypes.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/msinttypes/stdint.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/pointer.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/prettywriter.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/rapidjson.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/reader.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/stringbuffer.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/rapidjson/include/rapidjson/writer.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/Arg.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/ArgException.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/ArgTraits.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/CmdLine.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/CmdLineInterface.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/CmdLineOutput.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/Constraint.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/DocBookOutput.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/HelpVisitor.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/IgnoreRestVisitor.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/MultiArg.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/MultiSwitchArg.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/OptionalUnlabeledTracker.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/StandardTraits.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/StdOutput.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/SwitchArg.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/UnlabeledMultiArg.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/UnlabeledValueArg.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/ValueArg.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/ValuesConstraint.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/VersionVisitor.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/Visitor.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/XorHandler.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/libraries/tclap/include/tclap/ZshCompletionOutput.h">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/any.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/attr_wrapper.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/base_ai.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/base_ai.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/base_game.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/base_game.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/base_object.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/base_object.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/connection.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/connection.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/delta.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/delta.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/delta_mergable.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/delta_mergable.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/exceptions.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/main.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/register.cpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/register.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/sgr.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/unix_connection.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/Joueur.cpp/joueur/src/windows_connection.hpp">
+			<Option target="2019_sp_1a_game3_mcar43"/>
+		</Unit>
+		<Unit filename="/Users/mark/Documents/School/CS/CS5400/Game/2019-sp-1a-game3-mcar43/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,6 @@
+(a). The rotors of the enigma machines are permutation groups on 26 elements, and the shifts are the cyclic mapping of permutations (shifted three places right will shift everything right, adn the last 3 elements will come back to the front).  Each shift is a generator for the permutation, such that you will never leave the permutation group.  The reflector is a permutation group with the key fact that it is its own inverse.  The entire process of the enigma machine can be expressed as a product of these permutations.
+
+(b).Because the reflector is a permutation group with the property that it is its own inverse, whenever a specific rotor dconfiguration is inputted, the reflection will be the same regardless.  So while the rotors, and shifts may change, the way the signal is reflected back will stay the same.  This is important because it allows the message to be encrypted and decrypted with the same key.  More generally, if you have a rotor configuration A and a reflector R, the encryption process will be A*R, and the reflector will reflect back its inverse A^-1, so the whole process can go both ways represented by A*R*A^-1.
+
+(c). The mini enigma will never encipher the same letter as long as the reflector is not identical to the input mapping that it takes.  
+(d) = (2, 17, 0, 21, 1)

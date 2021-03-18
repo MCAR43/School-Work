@@ -1,0 +1,57 @@
+\title{Proposal for Library Analytics System}
+\author{
+        Missouri University of Science and Technology\\
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+
+\begin{document}
+\maketitle
+\paragraph{Description}
+The Library Analytics system will be a fully automated system for determining various real time statistics about the library.  This system will be designed by Senior students in Computer Science for the CS4096 Software Systems Development course.  The initial goal for the project will be an accurate count of the number of people in the library at any given time, displayed live to a website that only the library staff have access.  This goal will be simple and upon completion and verification of accuracy, other features could be installed.  Some of these features are listed below:
+\begin{itemize}
+  \item Accurate count of people on each floor
+  \item Density Heatmap to represent most popular locations
+  \item Retention rate (how long students spend in the library)
+  \item Live map of each floor to show what tables are open
+  \item Live monitor of Starbucks line
+  \item Status of non-reservation study rooms on the third floor (are they open?)
+\end{itemize}
+
+
+\paragraph{Method}
+All WiFi capable devices scan for networks using active or passive scanning.  The reason for this type of scanning is to determine potential Access Points in the area for the device to connect to.  During active scanning the device actively transmits frames called probe requests, and then listens for the response from access points.  During passive scanning this process is flipped, the WiFi device listens for beacon frames broadcasted by access points.  The data required to determine the various statistics stated above will be collected using the active scanning probe requests.  Every probe request contains a MAC address that uniquely identifies that device, the SSID of the access point requested, and the strength of the signal.  Using this data we can determine an accurate count of devices in the library at any given time.  With multiple of our devices picking up the same request, we can use the signal strength to triangulate location accurately.  No personal information on devices will be collected during this process, the unique MAC addresses will be hashed using a secret salt to preserve anonymity. This method of data collection is completely anonymous and non-intrusive. 
+
+
+\paragraph{Components Required}
+\begin{itemize}
+  \item Raspberry Pi Zero W
+  \par
+  \textit{Price: \$10}
+  \par
+  The Raspberry PIs are used to process the data taken in as well as house all of the components needed to collect the data required.
+  \item Micro SD Cards
+  \par
+  \textit{Price \$4 Per}
+  \par
+  "For installation of NOOBS or the image installation of Raspbian, the minimum recommended card size is 8GB.  For Raspbian Lite image installations we recommend a minimum of 4GB.  Some distributions, specifically LibreELEC and Arch, can run on much smaller cards"
+
+  \item Power Supply
+  \par
+  \textit{\$2.80 Per}
+  \par
+  "The device is powered by 5V micro USB.  We recommend a 2.5A (2500mA) power supply,from a reputable retailer, that will provide you with enough power to run your Raspberry Pi for most applications, including use of the 4 USB Ports"
+  
+  \item Power Cord
+  \par
+  \textit{\$ 1.50 Per}
+  \par
+  \par"Each Raspberry Pi will need a Micro USB cable to be powered."
+  \textbf{Total Price for each Unit: \$18.30}
+\end{itemize}
+
+\paragraph{Proof of Concept}
+To determine the applicability of this type of system, we propose an initial proof of concept, limited to one floor of the library with a small number of devices. The proof of concept system will utilize five of the units listed above to collect the data required.  With these five units we hope to be able to implement the number of people on the chosen floor, a heatmap of the most popular locations, the retention rate of the floor, and display this data live.  This system is easily scaleable so should the proof of concept prove feasible, outfitting the whole library will just require more devices. 
+
+\end{document}
